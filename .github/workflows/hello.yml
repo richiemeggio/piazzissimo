@@ -1,0 +1,13 @@
+name: Il mio primo Workflow
+on:
+  push:
+jobs:
+  saluta_e_controlla:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarico il codice
+        uses: actions/checkout@v4
+      - name: Stampo un saluto
+        run: echo "Ciao ITS, la GitHub Action funziona!"
+      - name: Guarda cosa c'è nel server
+        run: ls -la
